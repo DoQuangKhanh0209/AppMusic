@@ -36,7 +36,7 @@ final class ViewController: UIViewController {
     setupConstraints()
   }
   private func setupConstraints() {
-    //uitableview
+    //constraints table view
     NSLayoutConstraint.activate([
       tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
       tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),

@@ -10,13 +10,16 @@
 		04A1479C28F3B67600466607 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A1479B28F3B67600466607 /* AppDelegate.swift */; };
 		04A1479E28F3B67600466607 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A1479D28F3B67600466607 /* SceneDelegate.swift */; };
 		04A147A028F3B67600466607 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A1479F28F3B67600466607 /* ViewController.swift */; };
-		04A147A328F3B67600466607 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A147A128F3B67600466607 /* Main.storyboard */; };
 		04A147A528F3B67600466607 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04A147A428F3B67600466607 /* Assets.xcassets */; };
 		04A147A828F3B67600466607 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A147A628F3B67600466607 /* LaunchScreen.storyboard */; };
 		04A147B628F3D0A300466607 /* audio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04A147B528F3D0A300466607 /* audio.mp3 */; };
 		04A1482828F5C04F00466607 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A1482728F5C04F00466607 /* Song.swift */; };
 		04A1482A28F5C0A100466607 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A1482928F5C0A100466607 /* Album.swift */; };
 		04A1482D28F5C74E00466607 /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A1482C28F5C74E00466607 /* AlbumTableViewCell.swift */; };
+		04A1482F28F654AE00466607 /* MediaPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A1482E28F654AE00466607 /* MediaPlayer.swift */; };
+		04A1487B28F8106100466607 /* MediaPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A1487A28F8106100466607 /* MediaPlayerViewController.swift */; };
+		04A1487D28F8164700466607 /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A1487C28F8164700466607 /* main.storyboard */; };
+		04A1487F28F86E7000466607 /* song2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04A1487E28F86E7000466607 /* song2.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +27,6 @@
 		04A1479B28F3B67600466607 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04A1479D28F3B67600466607 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		04A1479F28F3B67600466607 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		04A147A228F3B67600466607 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04A147A428F3B67600466607 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04A147A728F3B67600466607 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04A147A928F3B67600466607 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -32,6 +34,10 @@
 		04A1482728F5C04F00466607 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		04A1482928F5C0A100466607 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		04A1482C28F5C74E00466607 /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
+		04A1482E28F654AE00466607 /* MediaPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPlayer.swift; sourceTree = "<group>"; };
+		04A1487A28F8106100466607 /* MediaPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPlayerViewController.swift; sourceTree = "<group>"; };
+		04A1487C28F8164700466607 /* main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
+		04A1487E28F86E7000466607 /* song2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song2.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,10 +76,10 @@
 				04A1479B28F3B67600466607 /* AppDelegate.swift */,
 				04A1479D28F3B67600466607 /* SceneDelegate.swift */,
 				04A1479F28F3B67600466607 /* ViewController.swift */,
-				04A147A128F3B67600466607 /* Main.storyboard */,
 				04A147A428F3B67600466607 /* Assets.xcassets */,
 				04A147A628F3B67600466607 /* LaunchScreen.storyboard */,
 				04A147A928F3B67600466607 /* Info.plist */,
+				04A1487C28F8164700466607 /* main.storyboard */,
 			);
 			path = AppMusic;
 			sourceTree = "<group>";
@@ -82,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				04A147B528F3D0A300466607 /* audio.mp3 */,
+				04A1487E28F86E7000466607 /* song2.mp3 */,
 			);
 			path = TheSong;
 			sourceTree = "<group>";
@@ -99,6 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				04A1482C28F5C74E00466607 /* AlbumTableViewCell.swift */,
+				04A1482E28F654AE00466607 /* MediaPlayer.swift */,
+				04A1487A28F8106100466607 /* MediaPlayerViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -164,7 +173,8 @@
 				04A147A828F3B67600466607 /* LaunchScreen.storyboard in Resources */,
 				04A147B628F3D0A300466607 /* audio.mp3 in Resources */,
 				04A147A528F3B67600466607 /* Assets.xcassets in Resources */,
-				04A147A328F3B67600466607 /* Main.storyboard in Resources */,
+				04A1487D28F8164700466607 /* main.storyboard in Resources */,
+				04A1487F28F86E7000466607 /* song2.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,10 +186,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				04A1482828F5C04F00466607 /* Song.swift in Sources */,
+				04A1482F28F654AE00466607 /* MediaPlayer.swift in Sources */,
 				04A147A028F3B67600466607 /* ViewController.swift in Sources */,
 				04A1479C28F3B67600466607 /* AppDelegate.swift in Sources */,
 				04A1479E28F3B67600466607 /* SceneDelegate.swift in Sources */,
 				04A1482A28F5C0A100466607 /* Album.swift in Sources */,
+				04A1487B28F8106100466607 /* MediaPlayerViewController.swift in Sources */,
 				04A1482D28F5C74E00466607 /* AlbumTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -187,14 +199,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		04A147A128F3B67600466607 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				04A147A228F3B67600466607 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		04A147A628F3B67600466607 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -330,8 +334,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AppMusic/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = main.storyboard;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -357,8 +361,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AppMusic/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = main.storyboard;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (

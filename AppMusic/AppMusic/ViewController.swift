@@ -8,54 +8,61 @@
 import UIKit
 
 final class ViewController: UIViewController {
-  
-  let albums = Album.get()
-  
-  //table view album list
-  private lazy var tableView: UITableView = {
-    let v = UITableView()
-    v.translatesAutoresizingMaskIntoConstraints = false
-    v.delegate = self
-    v.dataSource = self
-    v.register(AlbumTableViewCell.self, forCellReuseIdentifier: "cell")
-    v.rowHeight = UITableView.automaticDimension
-    v.tableFooterView = UIView()
-    return v
-  }()
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
     
-    setupView()
+    let albums = Album.get()
     
-  }
-  private func setupView() {
-    title = "My Music Player"
-    view.addSubview(tableView)
+    //table view album list
+    private lazy var tableView: UITableView = {
+        let viewTableViewAlbum = UITableView()
+        viewTableViewAlbum.translatesAutoresizingMaskIntoConstraints = false
+        viewTableViewAlbum.delegate = self
+        viewTableViewAlbum.dataSource = self
+        viewTableViewAlbum.register(AlbumTableViewCell.self, forCellReuseIdentifier: "cell")
+        viewTableViewAlbum.estimatedRowHeight = 123
+        viewTableViewAlbum.rowHeight = UITableView.automaticDimension
+        viewTableViewAlbum.tableFooterView = UIView()
+        return viewTableViewAlbum
+    }()
     
-    setupConstraints()
-  }
-  private func setupConstraints() {
-    //constraints table view
-    NSLayoutConstraint.activate([
-      tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-      tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-      tableView.topAnchor.constraint(equalTo: view.topAnchor),
-      tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-    ])
-  }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setupView()
+        
+    }
+    private func setupView() {
+        title = "My Music Player"
+        view.addSubview(tableView)
+        
+        setupConstraints()
+    }
+    private func setupConstraints() {
+        //constraints table view
+        NSLayoutConstraint.activate([
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            tableView.topAnchor.constraint(equalTo: view.topAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
+    }
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return albums.count
-  }
-  
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? AlbumTableViewCell else {
-      return UITableViewCell()
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return albums.count
     }
-    cell.album = albums[indexPath.row]
-    return cell
-  }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? AlbumTableViewCell else {
+            return UITableViewCell()
+        }
+        cell.album = albums[indexPath.row]
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let viewController = MediaPlayerViewController(album: albums[indexPath.row])
+        tableView.deselectRow(at: indexPath, animated: true)
+        present(viewController, animated: true, completion: nil)
+    }
 }
